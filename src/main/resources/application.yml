@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: '@project.artifactId@'
+  profiles:
+    active: composite
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations: var/git-repo
+            order: 2
+        bootstrap: true
+
+server:
+  port: 8080
