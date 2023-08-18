@@ -7,7 +7,6 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @SpringBootApplication
 @EnableConfigServer
 public class KalConfigServerApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(KalConfigServerApplication.class, args);
 	}
