@@ -17,6 +17,8 @@ spring:
             enabled: false
           bitbucket:
             enabled: false
+        bootstrap: true
+
   security:
     user:
       name: kyleus
