@@ -11,6 +11,9 @@ spring:
             search-locations: var/git-repo
             order: 2
         bootstrap: true
+  security:
+    user:
+      name: kyleus
 
 server:
   port: 8080
