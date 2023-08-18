@@ -10,10 +10,22 @@ spring:
           - type: native
             search-locations: var/git-repo
             order: 2
-        bootstrap: true
+        monitor:
+          github:
+            enabled: true
+          gitlab:
+            enabled: false
+          bitbucket:
+            enabled: false
   security:
     user:
       name: kyleus
 
 server:
   port: 8088
+
+logging:
+  level:
+    org.springframework.cloud.config.server.environment: INFO
+    org.springframework.cloud.config.server.support: INFO
+    org.springframework.cloud.config.environment.NativeEnvironmentRepository: WARN

@@ -5,7 +5,7 @@ GET {{protocol}}{{KAL_ENV_CS_USERNAME}}:{{KAL_ENV_CS_PWD}}@{{configServer}}/thel
 
 ###OTHER TEST
 // @no-cookie-jar
-GET {{protocol}}{{KAL_ENV_CS_USERNAME}}:{{KAL_ENV_CS_PWD}}@{{configServer}}/thelab/DEV/master
+GET {{protocol}}{{KAL_ENV_CS_USERNAME}}:{{KAL_ENV_CS_PWD}}@{{configServer}}/thelab/PROD
 
 
 ###NO JAVA TEST
