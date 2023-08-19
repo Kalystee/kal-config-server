@@ -1,24 +1,24 @@
 spring:
   application:
     name: '@project.artifactId@'
-  profiles:
-    active: composite
+
   cloud:
     config:
       server:
-        composite:
-          - type: native
-            search-locations: var/git-repo
-            order: 2
-        monitor:
-          github:
-            enabled: true
-          gitlab:
-            enabled: false
-          bitbucket:
-            enabled: false
-        bootstrap: true
-
+        git:
+          uri: https://github.com/Kalystee/kal-config-store
+          search-paths:
+            - '{application}/{profile}'
+            - '{application}'
+          timeout: 10
+          refresh-rate: 30
+          force-pull: true
+          clone-on-start: false
+          basedir: var/git-repo
+          skip-ssl-validation: true
+          delete-untracked-branches: true
+          default-label: main
+          order: 1
   security:
     user:
       name: kyleus
